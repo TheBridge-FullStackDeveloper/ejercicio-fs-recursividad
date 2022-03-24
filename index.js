@@ -6,6 +6,7 @@ const NEW_FILE = "./newFile.js";
 const excludeFileFromList = (list) =>
   list.filter((e) => !e.includes(FILE_TO_EXCLUDE));
 
+// Solution for exercise 1
 const numberOfFilesAndDirectories = (path = "./", total = 0) => {
   try {
     const list = excludeFileFromList(readdirSync(path));
@@ -29,6 +30,7 @@ console.info(
   numberOfFilesAndDirectories()
 );
 
+// Solution for exercise 2
 const numberOfFiles = (path = "./", total = 0) => {
   try {
     const list = excludeFileFromList(readdirSync(path));
@@ -50,6 +52,7 @@ const numberOfFiles = (path = "./", total = 0) => {
 
 console.info("> number of files: ", numberOfFiles());
 
+// Solution for exercise 3
 const totalFilesSize = (path = "./", total = 0) => {
   try {
     const list = excludeFileFromList(readdirSync(path));
@@ -71,6 +74,7 @@ const totalFilesSize = (path = "./", total = 0) => {
 
 console.info("> total files size: ", `${totalFilesSize()} bytes`);
 
+// Solution for exercise 4
 const appendIntoNewFile = (path = "./") => {
   try {
     const list = excludeFileFromList(readdirSync(path));
